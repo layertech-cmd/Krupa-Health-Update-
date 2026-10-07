@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Krupa's Progress · May to October 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --tile:#f5f5f7; --ink:#1d1d1f; --ink-2:#6e6e73; --line:#e5e5ea;
+  --green:#1f7a4d; --green-soft:#e3f3ea; --amber:#b8720a; --amber-soft:#fdf1dc;
+  --blue:#2f6fbd; --blue-soft:#e6eef9; --grey-dot:#aeaeb2;
+  --red:#ff375f; --orange:#ff9f0a; --lime:#30d158; --teal:#32ade6; --indigo:#5e5ce6; --purple:#bf5af2; --pink:#ff2d92;
+  --grad:linear-gradient(90deg,#ff375f 0%,#ff9f0a 25%,#30d158 50%,#32ade6 75%,#bf5af2 100%);
+  --r:28px;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#000; --tile:#1c1c1e; --ink:#f5f5f7; --ink-2:#a1a1a6; --line:#2c2c2e;
+    --green:#4cc38a; --green-soft:#0f2a1c; --amber:#e3a23a; --amber-soft:#2a1f0a;
+    --blue:#6ea8ff; --blue-soft:#0f1d33; --grey-dot:#636366;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#000; --tile:#1c1c1e; --ink:#f5f5f7; --ink-2:#a1a1a6; --line:#2c2c2e;
+  --green:#4cc38a; --green-soft:#0f2a1c; --amber:#e3a23a; --amber-soft:#2a1f0a;
+  --blue:#6ea8ff; --blue-soft:#0f1d33; --grey-dot:#636366;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px); scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0; background:var(--bg); color:var(--ink);
+  font-family:-apple-system,"SF Pro Display","SF Pro Text",Inter,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased; line-height:1.5; font-size:17px; overflow-x:hidden}
+h1,h2,h3{margin:0; font-weight:600; letter-spacing:-0.02em; line-height:1.1}
+p{margin:0}
+section{padding:80px 0}
+.wrap{max-width:1360px; margin:0 auto; padding:0 40px}
+@media (max-width:700px){.wrap{padding:0 20px} section{padding:56px 0}}
+.head{display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:36px; flex-wrap:wrap}
+.head h2{font-size:clamp(30px,3.4vw,44px); max-width:720px}
+.head .lead{font-size:19px; color:var(--ink-2); max-width:520px}
+.lead{color:var(--ink-2)}
+
+/* tiles */
+.tile{background:var(--tile); border-radius:var(--r); padding:32px}
+.tile h3{font-size:24px; margin-bottom:10px}
+.tile p{color:var(--ink-2)}
+.tile p b{color:var(--ink); font-weight:500}
+.grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+.grid2{display:grid; grid-template-columns:repeat(2,1fr); gap:20px}
+.auto{display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:20px}
+@media (max-width:1000px){.grid3{grid-template-columns:1fr 1fr}}
+@media (max-width:700px){.grid3,.grid2{grid-template-columns:1fr} .tile{padding:24px; --r:22px}}
+
+/* progress */
+#progress{position:fixed; left:0; top:env(safe-area-inset-top,0px); height:4px; width:0; background:var(--grad); z-index:50; transition:width .15s linear}
+
+/* Hero */
+.hero{position:relative; overflow:hidden; min-height:92vh; display:flex; align-items:center; padding:56px 0}
+.blob{position:absolute; width:46vw; height:46vw; max-width:640px; max-height:640px; border-radius:50%; filter:blur(90px); opacity:.26; pointer-events:none; z-index:0}
+.b1{background:#ff9f0a; left:-12vw; top:-10vw; animation:float1 14s ease-in-out infinite}
+.b2{background:#30d158; right:-14vw; top:10vw; animation:float2 17s ease-in-out infinite}
+.b3{background:#bf5af2; left:30vw; bottom:-24vw; animation:float3 19s ease-in-out infinite}
+@keyframes float1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(8vw,6vw) scale(1.12)}}
+@keyframes float2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-9vw,-7vw) scale(1.1)}}
+@keyframes float3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-6vw,-10vw) scale(1.15)}}
+.hero .wrap{position:relative; z-index:1; display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center; width:100%}
+.hero h1{font-size:clamp(44px,6.4vw,104px); font-weight:600; letter-spacing:-0.03em}
+.hero .lead{font-size:clamp(19px,1.6vw,24px); margin-top:22px; max-width:560px}
+.hero .sub{color:var(--ink-2); font-size:15px; margin-top:32px}
+.gradText{background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent; background-size:200% 100%; animation:shimmer 6s linear infinite}
+@keyframes shimmer{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr; gap:32px; text-align:center} .hero .lead{margin-left:auto;margin-right:auto} .tank{width:min(84vw,380px)} .hero{min-height:auto}}
+
+/* reveal */
+.reveal{opacity:0; transform:translateY(22px); transition:opacity .8s cubic-bezier(.2,.8,.2,1), transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1; transform:none}
+.reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}
+
+/* stat tiles */
+.stat{display:grid; grid-template-columns:150px 1fr; gap:24px; align-items:center}
+.ring{width:150px; height:150px; position:relative}
+.ring svg{width:100%; height:100%; transform:rotate(-90deg)}
+.ring circle{fill:none; stroke-width:11; stroke-linecap:round}
+.ring .bgc{stroke:var(--line)}
+.ring .fgc{stroke:var(--c); stroke-dasharray:408; stroke-dashoffset:408; transition:stroke-dashoffset 1.8s cubic-bezier(.2,.8,.2,1)}
+.ring .num{position:absolute; inset:0; display:grid; place-items:center; font-size:36px; font-weight:400; letter-spacing:-0.03em; color:var(--c); font-variant-numeric:tabular-nums}
+.stat .name{font-size:24px; font-weight:600}
+.stat .was{color:var(--ink-2); margin-top:6px}
+.stat .was b{color:var(--c); font-weight:500}
+@media (max-width:1000px){.stat{grid-template-columns:120px 1fr} .ring{width:120px;height:120px} .ring .num{font-size:28px}}
+
+/* markers */
+.legend{display:flex; gap:22px; flex-wrap:wrap; color:var(--ink-2); font-size:15px}
+.legend span{display:inline-flex; align-items:center; gap:8px}
+.dotk{width:12px;height:12px;border-radius:50%;display:inline-block}
+.bandk{width:26px;height:10px;border-radius:5px;background:var(--green-soft);display:inline-block}
+.rows{margin-top:28px; display:grid; grid-template-columns:1fr 1fr; column-gap:56px}
+@media (max-width:1000px){.rows{grid-template-columns:1fr}}
+.row{--c:var(--green); display:grid; grid-template-columns:180px 1fr 110px; gap:18px; align-items:center; padding:22px 0; border-top:1px solid var(--line)}
+.row .lab{font-weight:500}
+.row .lab small{display:block; color:var(--ink-2); font-weight:400; font-size:13.5px; margin-top:2px}
+.track{position:relative; height:34px}
+.track .axis{position:absolute; left:0; right:0; top:15px; height:4px; background:var(--line); border-radius:2px}
+.track .band{position:absolute; top:11px; height:12px; background:var(--green-soft); border-radius:6px}
+.track .join{position:absolute; top:15px; height:4px; background:linear-gradient(90deg,var(--grey-dot),var(--c)); border-radius:2px; width:0; transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.track .dot{position:absolute; top:7px; width:20px; height:20px; border-radius:50%; margin-left:-10px; border:3px solid var(--bg); box-shadow:0 0 0 1px var(--line)}
+.track .dot.may{background:var(--grey-dot)}
+.track .dot.oct{background:var(--c); transition:left 1.4s cubic-bezier(.2,.8,.2,1)}
+.track .dot.oct.ping::after{content:""; position:absolute; inset:-3px; border-radius:50%; border:2px solid var(--c); animation:ping 1.2s ease-out 1.3s 2}
+@keyframes ping{0%{transform:scale(1);opacity:.9}100%{transform:scale(2.6);opacity:0}}
+.row .val{text-align:right; font-variant-numeric:tabular-nums}
+.row .val .o{font-size:22px; font-weight:500; color:var(--c)}
+.row .val .m{display:block; color:var(--ink-2); font-size:14px; text-decoration:line-through; text-decoration-color:var(--grey-dot)}
+.row.newonly{--c:var(--indigo)}
+@media (max-width:700px){
+  .row{grid-template-columns:1fr; gap:10px; padding:18px 0}
+  .row .val{text-align:left; display:flex; gap:12px; align-items:baseline}
+  .row .val .m{display:inline}
+}
+
+/* checks tiles */
+.check .ck{width:40px; height:40px; border-radius:50%; color:#fff; display:grid; place-items:center; font-size:18px; margin-bottom:18px; transform:scale(0); transition:transform .5s cubic-bezier(.3,1.6,.4,1)}
+.check.in .ck{transform:scale(1)}
+.check h3{font-size:21px}
+
+/* rail */
+.railWrap{position:relative}
+.rail{display:grid; grid-auto-flow:column; grid-auto-columns:minmax(360px,1fr); gap:20px; overflow-x:auto; scroll-snap-type:x mandatory; padding:4px 0 20px; scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail .tile{scroll-snap-align:start; min-height:300px; display:flex; flex-direction:column}
+.rail .tile p{margin-top:auto; padding-top:12px}
+@media (max-width:700px){.rail{grid-auto-columns:86%}}
+.pill{display:inline-block; font-size:13px; font-weight:500; padding:5px 11px; border-radius:999px; margin-bottom:14px; background:#fff0d6; color:#c76a00}
+.pill.ok{background:#dff8e6; color:#1a8f45}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .pill{background:#2a1f0a;color:#e3a23a}
+  :root:not([data-theme="light"]) .pill.ok{background:#0f2a1c;color:#4cc38a}
+  :root:not([data-theme="light"]) .tag.go{background:#0f2a1c;color:#4cc38a}
+  :root:not([data-theme="light"]) .tag.less{background:#0f1d33;color:#6ea8ff}
+  :root:not([data-theme="light"]) .tag.ask{background:#2a1f0a;color:#e3a23a}
+}
+.hint{color:var(--ink-2); font-size:14px; margin-top:4px}
+
+/* medicines */
+.med{border-top:6px solid var(--c,var(--green))}
+.med .n{font-size:24px; font-weight:600}
+.med .n small{display:block; font-weight:400; color:var(--ink-2); font-size:15px; margin-top:4px; margin-bottom:14px}
+.tag{display:inline-block; font-size:13px; font-weight:500; padding:5px 11px; border-radius:999px; margin-bottom:12px}
+.tag.go{background:#dff8e6; color:#1a8f45}
+.tag.less{background:#e0f1ff; color:#0a6fd6}
+.tag.ask{background:#fff0d6; color:#c76a00}
+.tag.done{background:var(--bg); color:var(--ink-2); border:1px solid var(--line)}
+
+/* sleep */
+.sleep ul{list-style:none; padding:0; margin:0}
+.sleep li{padding:12px 0; border-top:1px solid var(--line); color:var(--ink-2)}
+.sleep li b{color:var(--ink); font-weight:500}
+
+/* timeline */
+.tl{list-style:none; padding:0; margin:0; position:relative; display:grid; grid-template-columns:repeat(7,1fr); gap:20px}
+.tl::before{content:""; position:absolute; left:8px; right:8px; top:9px; height:2px; background:var(--line); transform:scaleX(0); transform-origin:left; transition:transform 1.8s cubic-bezier(.2,.8,.2,1)}
+.tl.in::before{transform:scaleX(1)}
+.tl li{position:relative; padding-top:34px}
+.tl li::before{content:""; position:absolute; left:3px; top:3px; width:14px; height:14px; border-radius:50%; background:var(--bg); border:2px solid var(--grey-dot)}
+.tl li.done::before{background:var(--lime); border-color:var(--lime)}
+.tl li.now::before{background:var(--orange); border-color:var(--orange); box-shadow:0 0 0 6px rgba(255,159,10,.18)}
+.tl .when{font-weight:600; font-size:18px}
+.tl .what{color:var(--ink-2); font-size:15px; margin-top:6px}
+@media (max-width:1000px){
+  .tl{grid-template-columns:1fr; gap:0}
+  .tl::before{left:9px; right:auto; top:8px; bottom:8px; width:2px; height:auto; transform:scaleY(0); transform-origin:top}
+  .tl.in::before{transform:scaleY(1)}
+  .tl li{padding:0 0 28px 40px}
+  .tl li::before{top:7px}
+}
+
+footer{padding:64px 0 100px; text-align:center; color:var(--ink-2); font-size:15px}
+footer .close{font-size:clamp(30px,4.5vw,52px); font-weight:600; letter-spacing:-0.03em; margin-bottom:16px}
+footer p{max-width:640px; margin:0 auto}
+
+/* hero: liquid tank */
+.tank{position:relative; width:min(100%,520px); margin:0 auto; opacity:0; animation:fadeUp 1.2s ease .5s forwards}
+.tank svg{width:100%; height:auto; display:block}
+.tank .shell{fill:none; stroke:var(--line); stroke-width:6}
+.tank .wave{animation:drift 7s linear infinite}
+.tank .w2{animation-duration:11s; animation-direction:reverse}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-480px)}}
+#liquid{transition:transform 2.6s cubic-bezier(.2,.8,.2,1) .6s}
+.tank .target{stroke:var(--ink-2); stroke-width:2; stroke-dasharray:8 8; opacity:.6}
+.tank .tlab{font-size:15px; fill:var(--ink-2)}
+.tank .inner{position:absolute; left:0; right:0; top:22%; text-align:center}
+.tank .big{font-size:clamp(84px,11vw,150px); font-weight:300; letter-spacing:-0.05em; line-height:1; font-variant-numeric:tabular-nums; color:var(--ink)}
+.tank .cap{color:var(--ink-2); font-size:17px; margin-top:6px}
+.tank .cap strong{color:var(--ink); font-weight:500}
+.tank .dates{display:flex; align-items:center; gap:14px; margin-top:22px; font-size:15px; color:var(--ink-2); font-weight:500}
+.tank .dates i{flex:1; height:4px; border-radius:2px; background:var(--line); overflow:hidden; display:block}
+.tank .dates b{display:block; height:100%; width:0; background:linear-gradient(90deg,var(--grey-dot),#30d158); transition:width 2.6s cubic-bezier(.2,.8,.2,1) .6s}
+.hero::before{content:""; position:absolute; inset:0; background:radial-gradient(60% 60% at 70% 45%,rgba(48,209,88,.10),rgba(255,255,255,0) 70%); pointer-events:none}
+.hero h1 .w{display:inline-block; overflow:hidden; vertical-align:bottom; margin-right:.22em}
+.hero h1 .w span{display:inline-block; transform:translateY(110%); animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes rise{to{transform:translateY(0)}}
+.hero .lead,.hero .sub{opacity:0; animation:fadeUp 1s ease forwards}
+.hero .lead{animation-delay:.9s}.hero .sub{animation-delay:1.3s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.scrollHint{position:absolute; left:50%; bottom:22px; transform:translateX(-50%); width:26px; height:42px; border:2px solid var(--line); border-radius:14px; z-index:1}
+.scrollHint::after{content:""; position:absolute; left:50%; top:8px; width:4px; height:8px; margin-left:-2px; border-radius:2px; background:var(--ink-2); animation:wheel 1.6s ease-in-out infinite}
+@keyframes wheel{0%{transform:translateY(0);opacity:1}100%{transform:translateY(14px);opacity:0}}
+
+/* glance: radar + deltas */
+.glance{display:grid; grid-template-columns:1.1fr 1fr; gap:20px}
+.radarTile{display:grid; place-items:center; padding:28px}
+#radar{width:100%; max-width:560px; height:auto}
+#radar .grid{fill:none; stroke:var(--line); stroke-width:1}
+#radar .axis{stroke:var(--line); stroke-width:1}
+#radar .band{fill:#dff8e6; opacity:.9}
+#radar .may{fill:rgba(174,174,178,.25); stroke:var(--grey-dot); stroke-width:2}
+#radar .oct{fill:rgba(48,209,88,.28); stroke:#30d158; stroke-width:3; stroke-linejoin:round}
+#radar .lbl{font-size:14px; fill:var(--ink); font-weight:500}
+#radar .pt{fill:#30d158; stroke:#fff; stroke-width:2}
+.deltas{display:grid; grid-template-columns:1fr 1fr; gap:20px}
+.delta .big{font-size:clamp(40px,4vw,60px); font-weight:300; letter-spacing:-0.04em; line-height:1; color:var(--c); font-variant-numeric:tabular-nums}
+.delta .name{font-size:19px; font-weight:600; margin-top:10px}
+.delta .was{color:var(--ink-2); font-size:15px; margin-top:4px}
+.delta .spark{height:6px; border-radius:3px; background:var(--line); margin-top:16px; overflow:hidden}
+.delta .spark i{display:block; height:100%; width:0; background:var(--c); border-radius:3px; transition:width 1.6s cubic-bezier(.2,.8,.2,1) .2s}
+.delta.in .spark i{width:var(--w)}
+@media (max-width:1000px){.glance{grid-template-columns:1fr}}
+@media (max-width:600px){.deltas{grid-template-columns:1fr 1fr; gap:12px} .delta{padding:18px}}
+
+/* bars */
+.bars{display:grid; grid-template-columns:repeat(8,1fr); gap:14px}
+.bar{text-align:center}
+.bar .plot{height:240px; display:flex; align-items:flex-end; justify-content:center; gap:10px; position:relative; background:var(--tile); border-radius:16px; padding:0 8px}
+.bar .plot .zone{position:absolute; left:0; right:0; background:#dff8e6; opacity:.9}
+.bar .plot .zone::after{content:"healthy"; position:absolute; right:8px; top:6px; font-size:11px; color:#1a8f45; font-weight:500}
+.bar .b{width:30%; max-width:34px; border-radius:8px 8px 3px 3px; transform:scaleY(0); transform-origin:bottom; transition:transform 1.4s cubic-bezier(.2,.8,.2,1); position:relative}
+.bar .b.m{background:var(--grey-dot)}
+.bar .b.o{background:var(--c); transition-delay:.25s}
+.bar .b span{position:absolute; left:50%; transform:translateX(-50%); bottom:100%; margin-bottom:6px; font-size:13px; font-weight:500; white-space:nowrap; opacity:0; transition:opacity .6s ease 1.2s}
+.bar.in .b{transform:scaleY(1)}
+.bar.in .b span{opacity:1}
+.bar .b.o span{color:var(--c)}
+.bar .b.m span{color:var(--ink-2)}
+.bar .dl{display:flex; justify-content:center; gap:10px; margin-top:8px}
+.bar .dl span{width:30%; max-width:34px; font-size:12px; color:var(--ink-2); text-align:center; white-space:nowrap}
+.bar .dl span:last-child{color:var(--c); font-weight:500}
+.bar .name{font-weight:500; margin-top:12px; font-size:15px}
+.bar .unit{color:var(--ink-2); font-size:12.5px}
+@media (max-width:1000px){.bars{grid-template-columns:repeat(4,1fr); row-gap:32px}}
+@media (max-width:600px){.bars{grid-template-columns:repeat(2,1fr)} .bar .plot{height:170px}}
+
+@media (prefers-reduced-motion: reduce){
+  .hero h1 .w span,.hero .lead,.hero .sub,.tank,.scrollHint::after,.tank .wave{animation:none; opacity:1; transform:none}
+  #liquid,.tank .dates b{transition:none}
+  .delta .spark i,.bar .b,.bar .b span{transition:none}
+  .bar .b{transform:none} .bar .b span{opacity:1}
+  .track .dot.oct,.track .join,.reveal,.ring .fgc,.heroRing .fgc,.check .ck,.tl::before{transition:none; animation:none}
+  .reveal{opacity:1; transform:none}
+  .blob,.gradText{animation:none}
+  .tl::before{transform:none}
+  .check .ck{transform:none}
+}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Krupa, look how far you've come.</h1>
+      <p class="lead">Your blood test from 8 May, compared with 6 October 2026. Five months of medicines, mangoes, morning sun and tennis, in numbers.</p>
+      <p class="sub">Scroll to see every marker, what the flags mean, and what happens next.</p>
+    </div>
+    <div class="tank">
+      <svg viewBox="0 0 480 480" aria-hidden="true">
+        <defs>
+          <clipPath id="tc"><circle cx="240" cy="240" r="216"/></clipPath>
+          <linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#30d158"/><stop offset="1" stop-color="#1f7a4d"/></linearGradient>
+        </defs>
+        <circle class="shell" cx="240" cy="240" r="222"/>
+        <g clip-path="url(#tc)">
+          <g id="liquid" style="transform:translate(0,423px)">
+            <path class="wave w2" id="w2" fill="url(#lg)" opacity=".45"/>
+            <path class="wave w1" id="w1" fill="url(#lg)"/>
+          </g>
+          <line class="target" x1="0" x2="480" y1="336" y2="336"/>
+          <text class="tlab" x="30" y="326">healthy from 30</text>
+        </g>
+      </svg>
+      <div class="inner">
+        <div class="big" id="heroNum" data-from="11.8" data-to="42.5" data-dec="1">11.8</div>
+        <p class="cap"><strong>Ferritin</strong>, your iron store</p>
+      </div>
+      <div class="dates"><span>8 May 2026</span><i><b id="dbar"></b></i><span>6 Oct 2026</span></div>
+    </div>
+  </div>
+  <div class="scrollHint"></div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>Three numbers that changed everything</h2>
+      <p class="lead">The ones behind the tiredness you felt in May, and why it has been lifting.</p>
+    </div>
+    <div class="grid3">
+      <div class="tile stat reveal" style="--c:var(--red)">
+        <div class="ring" data-pct="70"><svg viewBox="0 0 150 150"><circle class="bgc" cx="75" cy="75" r="65"/><circle class="fgc" cx="75" cy="75" r="65"/></svg>
+        <div class="num" data-from="11.7" data-to="13.1" data-dec="1">11.7</div></div>
+        <div><div class="name">Haemoglobin</div><div class="was">was 11.7 · now <b>normal</b></div></div>
+      </div>
+      <div class="tile stat reveal d1" style="--c:var(--orange)">
+        <div class="ring" data-pct="85"><svg viewBox="0 0 150 150"><circle class="bgc" cx="75" cy="75" r="65"/><circle class="fgc" cx="75" cy="75" r="65"/></svg>
+        <div class="num" data-from="11.8" data-to="42.5" data-dec="1">11.8</div></div>
+        <div><div class="name">Ferritin</div><div class="was">was 11.8 · now <b>3.6× higher</b></div></div>
+      </div>
+      <div class="tile stat reveal d2" style="--c:var(--teal)">
+        <div class="ring" data-pct="62"><svg viewBox="0 0 150 150"><circle class="bgc" cx="75" cy="75" r="65"/><circle class="fgc" cx="75" cy="75" r="65"/></svg>
+        <div class="num" data-from="25.5" data-to="36.9" data-dec="1">25.5</div></div>
+        <div><div class="name">Vitamin D</div><div class="was">was insufficient · now <b>normal</b></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>Your health, in one shape</h2>
+      <p class="lead">Eight markers on one chart. Grey is May. Green is October. The green zone is the healthy range, and the shape grows as you move into it.</p>
+    </div>
+    <div class="glance">
+      <div class="tile radarTile reveal"><svg id="radar" viewBox="0 0 560 560" aria-label="Radar chart of eight markers, May versus October"></svg></div>
+      <div class="deltas">
+        <div class="tile delta reveal" style="--c:var(--orange);--w:100%"><div class="big" data-from="0" data-to="260" data-dec="0" data-prefix="+" data-suffix="%">+0%</div><div class="name">Ferritin</div><div class="was">11.8 to 42.5</div><div class="spark"><i></i></div></div>
+        <div class="tile delta reveal d1" style="--c:var(--lime);--w:74%"><div class="big" data-from="0" data-to="191" data-dec="0" data-prefix="+" data-suffix="%">+0%</div><div class="name">Folic acid</div><div class="was">4.7 to 13.7</div><div class="spark"><i></i></div></div>
+        <div class="tile delta reveal d1" style="--c:var(--indigo);--w:45%"><div class="big" data-from="0" data-to="117" data-dec="0" data-prefix="+" data-suffix="%">+0%</div><div class="name">Vitamin B6</div><div class="was">8.6 to 18.6</div><div class="spark"><i></i></div></div>
+        <div class="tile delta reveal d2" style="--c:var(--pink);--w:30%"><div class="big" data-from="0" data-to="77" data-dec="0" data-prefix="+" data-suffix="%">+0%</div><div class="name">Vitamin B2</div><div class="was">146 to 257</div><div class="spark"><i></i></div></div>
+        <div class="tile delta reveal d2" style="--c:var(--purple);--w:20%"><div class="big" data-from="0" data-to="53" data-dec="0" data-prefix="+" data-suffix="%">+0%</div><div class="name">Vitamin B1</div><div class="was">76 to 117</div><div class="spark"><i></i></div></div>
+        <div class="tile delta reveal d3" style="--c:var(--teal);--w:17%"><div class="big" data-from="0" data-to="45" data-dec="0" data-prefix="+" data-suffix="%">+0%</div><div class="name">Vitamin D</div><div class="was">25.5 to 36.9</div><div class="spark"><i></i></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>Side by side</h2>
+      <div><p class="lead">Grey bar is the test on 8 May 2026, coloured bar is 6 October 2026, green zone is the healthy range.</p>
+      <div class="legend" style="margin-top:12px"><span><i class="dotk" style="background:var(--grey-dot)"></i>8 May 2026</span><span><i class="dotk" style="background:var(--lime)"></i>6 Oct 2026</span><span><i class="bandk"></i>Healthy range</span></div></div>
+    </div>
+    <div class="bars">
+      <div class="bar" style="--c:var(--red)" data-max="16" data-lo="12" data-hi="15" data-may="11.7" data-oct="13.1"><div class="plot"></div><div class="name">Haemoglobin</div><div class="unit">g/dL</div></div>
+      <div class="bar" style="--c:var(--orange)" data-max="60" data-lo="30" data-hi="60" data-may="11.81" data-oct="42.53"><div class="plot"></div><div class="name">Ferritin</div><div class="unit">ng/mL</div></div>
+      <div class="bar" style="--c:var(--teal)" data-max="60" data-lo="30" data-hi="60" data-may="25.5" data-oct="36.9"><div class="plot"></div><div class="name">Vitamin D</div><div class="unit">ng/mL</div></div>
+      <div class="bar" style="--c:var(--lime)" data-max="22" data-lo="3.1" data-hi="20.5" data-may="4.7" data-oct="13.7"><div class="plot"></div><div class="name">Folic acid</div><div class="unit">ng/mL</div></div>
+      <div class="bar" style="--c:var(--purple)" data-max="190" data-lo="70" data-hi="180" data-may="76.32" data-oct="116.83"><div class="plot"></div><div class="name">Vitamin B1</div><div class="unit">nmol/L</div></div>
+      <div class="bar" style="--c:var(--pink)" data-max="380" data-lo="137" data-hi="370" data-may="145.87" data-oct="257.46"><div class="plot"></div><div class="name">Vitamin B2</div><div class="unit">µg/L</div></div>
+      <div class="bar" style="--c:var(--indigo)" data-max="34" data-lo="2" data-hi="32.8" data-may="8.58" data-oct="18.63"><div class="plot"></div><div class="name">Vitamin B6</div><div class="unit">µg/L</div></div>
+      <div class="bar" style="--c:var(--green)" data-max="1000" data-lo="187" data-hi="883" data-may="806" data-oct="827"><div class="plot"></div><div class="name">Vitamin B12</div><div class="unit">pg/mL</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>Every marker, before and after</h2>
+      <div><p class="lead">The green band is the healthy range. Grey is May. Watch the coloured dot move to where you are now.</p>
+      <div class="legend" style="margin-top:12px">
+        <span><i class="dotk" style="background:var(--grey-dot)"></i>8 May 2026</span>
+        <span><i class="dotk" style="background:var(--lime)"></i>6 Oct 2026</span>
+        <span><i class="bandk"></i>Healthy range</span>
+      </div></div>
+    </div>
+    <div class="rows" id="rows">
+      <div class="row" style="--c:var(--red)" data-min="10" data-max="16" data-lo="12" data-hi="15" data-may="11.7" data-oct="13.1">
+        <div class="lab">Haemoglobin<small>g/dL · normal 12 to 15</small></div><div class="track"></div>
+        <div class="val"><span class="o">13.1</span><span class="m">11.7</span></div></div>
+      <div class="row" style="--c:var(--orange)" data-min="0" data-max="100" data-lo="30" data-hi="100" data-may="11.81" data-oct="42.53">
+        <div class="lab">Ferritin<small>ng/mL · target above 30</small></div><div class="track"></div>
+        <div class="val"><span class="o">42.5</span><span class="m">11.8</span></div></div>
+      <div class="row" style="--c:var(--teal)" data-min="0" data-max="100" data-lo="30" data-hi="100" data-may="25.5" data-oct="36.9">
+        <div class="lab">Vitamin D<small>ng/mL · normal 30 to 100</small></div><div class="track"></div>
+        <div class="val"><span class="o">36.9</span><span class="m">25.5</span></div></div>
+      <div class="row" style="--c:var(--lime)" data-min="0" data-max="25" data-lo="3.1" data-hi="20.5" data-may="4.7" data-oct="13.7">
+        <div class="lab">Folic acid<small>ng/mL · normal 3.1 to 20.5</small></div><div class="track"></div>
+        <div class="val"><span class="o">13.7</span><span class="m">4.7</span></div></div>
+      <div class="row" style="--c:var(--purple)" data-min="50" data-max="200" data-lo="70" data-hi="180" data-may="76.32" data-oct="116.83">
+        <div class="lab">Vitamin B1<small>nmol/L · normal 70 to 180</small></div><div class="track"></div>
+        <div class="val"><span class="o">116.8</span><span class="m">76.3</span></div></div>
+      <div class="row" style="--c:var(--pink)" data-min="100" data-max="400" data-lo="137" data-hi="370" data-may="145.87" data-oct="257.46">
+        <div class="lab">Vitamin B2<small>µg/L · normal 137 to 370</small></div><div class="track"></div>
+        <div class="val"><span class="o">257.5</span><span class="m">145.9</span></div></div>
+      <div class="row" style="--c:var(--indigo)" data-min="0" data-max="35" data-lo="2" data-hi="32.8" data-may="8.58" data-oct="18.63">
+        <div class="lab">Vitamin B6<small>µg/L · normal 2 to 32.8</small></div><div class="track"></div>
+        <div class="val"><span class="o">18.6</span><span class="m">8.6</span></div></div>
+      <div class="row" style="--c:var(--green)" data-min="100" data-max="1000" data-lo="187" data-hi="883" data-may="806" data-oct="827">
+        <div class="lab">Vitamin B12<small>pg/mL · normal 187 to 883</small></div><div class="track"></div>
+        <div class="val"><span class="o">827</span><span class="m">806</span></div></div>
+      <div class="row" style="--c:var(--orange)" data-min="4" data-max="7" data-lo="4" data-hi="5.7" data-may="5.0" data-oct="4.9">
+        <div class="lab">HbA1c<small>% · 3-month sugar average, under 5.7</small></div><div class="track"></div>
+        <div class="val"><span class="o">4.9</span><span class="m">5.0</span></div></div>
+      <div class="row newonly" data-min="0" data-max="6" data-lo="0.35" data-hi="4.94" data-oct="2.99">
+        <div class="lab">TSH (thyroid)<small>µIU/mL · normal 0.35 to 4.94 · new</small></div><div class="track"></div>
+        <div class="val"><span class="o">2.99</span></div></div>
+      <div class="row newonly" data-min="8" data-max="11" data-lo="8.4" data-hi="10.2" data-oct="8.9">
+        <div class="lab">Calcium<small>mg/dL · normal 8.4 to 10.2 · new</small></div><div class="track"></div>
+        <div class="val"><span class="o">8.90</span></div></div>
+      <div class="row newonly" data-min="0" data-max="1.5" data-lo="0.5" data-hi="1.0" data-oct="0.68">
+        <div class="lab">Creatinine (kidney)<small>mg/dL · normal 0.5 to 1.0 · new</small></div><div class="track"></div>
+        <div class="val"><span class="o">0.68</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>Also checked, also fine</h2>
+      <p class="lead">Tested for the first time, so nothing to compare, but every one came back healthy.</p>
+    </div>
+    <div class="grid3 checks">
+      <div class="tile check"><i class="ck" style="background:var(--lime)">✓</i><h3>Thyroid</h3><p>T3, T4 and TSH all normal. So the thyroid is not behind the tiredness or the broken sleep.</p></div>
+      <div class="tile check"><i class="ck" style="background:var(--teal)">✓</i><h3>Kidneys</h3><p>Creatinine, urea and electrolytes all normal. The calcium and Vitamin D tablets are safe to continue.</p></div>
+      <div class="tile check"><i class="ck" style="background:var(--orange)">✓</i><h3>No inflammation</h3><p>ESR is 2. This also means the ferritin number is real, not inflated by inflammation.</p></div>
+      <div class="tile check"><i class="ck" style="background:var(--red)">✓</i><h3>Full blood count</h3><p>Red cells, white cells and platelets all normal, with healthy red cell shape on the smear.</p></div>
+      <div class="tile check"><i class="ck" style="background:var(--purple)">✓</i><h3>Liver</h3><p>All enzymes normal. The mild bilirubin rise is the same harmless pattern as May (Gilbert's).</p></div>
+      <div class="tile check"><i class="ck" style="background:var(--pink)">✓</i><h3>Cholesterol</h3><p>LDL 77, triglycerides 112, both healthy. HDL 76.7 is the good cholesterol, and high is good.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>The flags on the report, explained</h2>
+      <p class="lead">A few items are marked high or low. Here is what each one actually means. Swipe to see all six.</p>
+    </div>
+    <div class="railWrap">
+      <div class="rail">
+        <div class="tile"><span class="pill">flagged high</span><h3>Transferrin saturation 49%</h3><p>This measures iron travelling in the blood right now, and it jumps for hours after an iron dose. You had Hemfer the evening before, so this is the <b>syrup showing up in the blood</b>, not an overload. Ferritin of 42 confirms the stores are healthy. It does tell us <b>twice-daily iron is now more than you need</b>.</p></div>
+        <div class="tile"><span class="pill">flagged high</span><h3>Fasting glucose 106.67</h3><p>This was not a true fasting sample. You had your usual pre-iron snack that morning, as planned, so the number does not count. The reliable sugar test is <b>HbA1c, your 3-month average, which is 4.9 and excellent</b>. Next time we will do it properly fasting.</p></div>
+        <div class="tile"><span class="pill">flagged</span><h3>Urine protein, trace</h3><p>A trace amount in a concentrated morning sample, with normal kidneys and no blood or infection. Usually <b>hydration or recent exercise</b>. We will recheck with a well-hydrated morning sample. If it is still there, Dr. Parmar will take a look.</p></div>
+        <div class="tile"><span class="pill ok">in range, low end</span><h3>Vitamin C 0.56 and Vitamin A 0.42</h3><p>Both normal but near the bottom of the range. This is a <b>food job, not a medicine job</b>. Winter citrus is perfectly timed: oranges, amla, guava and capsicum for C; carrots, pumpkin, sweet potato, papaya and greens with ghee for A.</p></div>
+        <div class="tile"><span class="pill ok">high, and that is good</span><h3>HDL cholesterol 76.67</h3><p>HDL is the protective cholesterol. The lab flags anything above 60, but <b>higher HDL lowers heart risk</b>. The ghee, nuts and full-fat milk from the weight-gain plan are likely behind this. Total cholesterol 176 and LDL 77 are both healthy.</p></div>
+        <div class="tile"><span class="pill ok">same as May</span><h3>Bilirubin 1.46</h3><p>Mildly raised in May (1.53) and mildly raised now, with every liver enzyme normal. This is the <b>Gilbert's pattern</b>, a harmless trait many people have. Nothing to treat.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>Your medicines, from here</h2>
+      <p class="lead">What the results suggest for each one. Dr. Parmar has the final say, so take this page to him.</p>
+    </div>
+    <div class="auto">
+      <div class="tile med reveal" style="--c:var(--red)"><div class="n">Hemfer Syrup<small>iron</small></div><span class="tag less">Reduce</span><p>Once daily in the morning for two more months, then stop. A ferritin above 50 is the level linked to calmer sleep and settled legs, and heavy periods keep drawing iron down. Recheck ferritin and iron profile in January.</p></div>
+      <div class="tile med reveal" style="--c:var(--orange)"><div class="n">D-360<small>Vitamin D3 60,000 IU</small></div><span class="tag go">Continue</span><p>Once a month through the winter. 36.9 is normal but not high. Recheck in April.</p></div>
+      <div class="tile med reveal" style="--c:var(--lime)"><div class="n">Shelcal 500 and Corcium K2<small>calcium, Vitamin K2</small></div><span class="tag go">Continue</span><p>Your blood calcium is normal, so they are safe, and the bones need them until the next DXA scan in January 2028. In November, ask Dr. Parmar whether to keep both or one.</p></div>
+      <div class="tile med reveal" style="--c:var(--indigo)"><div class="n">Magnesium glycinate<small>bedtime</small></div><span class="tag go">Continue</span><p>Sleep is the one thing still to fix, so this stays. Check the label shows 200 to 300 mg of elemental magnesium.</p></div>
+      <div class="tile med reveal" style="--c:var(--teal)"><div class="n">Becosules Z<small>B-complex, Vitamin C, zinc</small></div><span class="tag ask">Stop or reduce</span><p>B1 and B2 are corrected. It can stop now, or continue three times a week through winter as a vegetarian safety net. Either is fine.</p></div>
+      <div class="tile med reveal" style="--c:var(--purple)"><div class="n">Aeroflex<small>joint support</small></div><span class="tag ask">Depends on your foot</span><p>If the toe pain has eased, it can stop. If it still helps, continue.</p></div>
+      <div class="tile med reveal" style="--c:var(--grey-dot)"><div class="n">Folypa MD<small>folic acid</small></div><span class="tag done">Finished</span><p>The 10-day course in May did its job. Folate went from 4.7 to 13.7. Nothing more needed.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>Sleep, the next chapter</h2>
+      <p class="lead">This report quietly answered a big question: the body causes of broken sleep are now mostly cleared. That narrows the search.</p>
+    </div>
+    <div class="grid3 sleep">
+      <div class="tile reveal"><h3 style="color:var(--lime)">Ruled out</h3><ul>
+        <li><b>Thyroid.</b> All normal.</li><li><b>Low haemoglobin.</b> Normal now.</li><li><b>Empty iron stores.</b> Ferritin 42 and rising toward 50.</li><li><b>Blood sugar.</b> HbA1c 4.9, excellent.</li></ul></div>
+      <div class="tile reveal d1"><h3 style="color:var(--orange)">Still on the list</h3><ul>
+        <li><b>Perimenopause.</b> The commonest cause of waking at 2 to 4 AM at this stage, sometimes hot or sweaty.</li><li><b>The early-morning stress hormone,</b> when the mind has been carrying a lot.</li><li><b>A warm room, late fluids, or a night-time sugar dip.</b></li></ul></div>
+      <div class="tile reveal d2"><h3 style="color:var(--indigo)">What to do now</h3><ul>
+        <li><b>Keep the 14-night sleep diary.</b> Time you wake, and what you felt: hot, legs, bathroom, thoughts, or a dream.</li><li><b>Take the diary and this report to Dr. Nayna.</b> She can judge whether the waking is hormonal, and whether the Restonin from January should restart.</li><li><b>Keep the bedtime routine.</b> Magnesium, warm haldi milk with two dates, a cool room, Yog Nidra, most of your water before 7 PM.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>Two small food jobs</h2>
+      <p class="lead">For the two vitamins at the low end of normal. No tablets, just a little steering of the plate.</p>
+    </div>
+    <div class="grid2">
+      <div class="tile reveal"><h3>Vitamin C</h3><p>Oranges, sweet lime, amla (fresh or murabba), guava, kiwi, capsicum, tomatoes. One citrus fruit a day through winter covers it.</p></div>
+      <div class="tile reveal d1"><h3>Vitamin A</h3><p>Carrots, pumpkin, sweet potato, papaya, methi, palak. Cook the greens with a spoon of ghee, because Vitamin A needs fat to be absorbed.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>The road ahead</h2>
+      <p class="lead">Recovery is a path, not a switch. Here is where you are on it.</p>
+    </div>
+    <ul class="tl">
+      <li class="done"><div class="when">May 2026</div><div class="what">Full blood test. Iron, Vitamin D, folate, B1 and B2 all low. The eight-medicine plan began.</div></li>
+      <li class="done"><div class="when">October 2026</div><div class="what">Retest. Every low marker corrected. Thyroid, kidneys and calcium normal.</div></li>
+      <li class="now"><div class="when">Next two weeks</div><div class="what">Sleep diary. Visit to Dr. Nayna. Dr. Parmar reviews the medicine changes.</div></li>
+      <li><div class="when">November 2026</div><div class="what">Six months on calcium. Dr. Parmar decides whether to keep both tablets or one.</div></li>
+      <li><div class="when">January 2027</div><div class="what">Recheck ferritin, iron profile, and a proper fasting glucose. Iron syrup likely stops.</div></li>
+      <li><div class="when">April 2027</div><div class="what">Recheck Vitamin D after the winter.</div></li>
+      <li><div class="when">January 2028</div><div class="what">Repeat DXA bone scan to see how the bones have rebuilt.</div></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="close gradText">Slow. Steady. Real.</div>
+    <p>Five months ago your body was running on empty. Today, almost every tank is full. The rest is sleep, and that is next.</p>
+    <p style="margin-top:28px">Prepared from Neuberg Supratech reports dated 8 May and 6 October 2026. This page supports your doctors' advice and does not replace it.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Range bars
+  var rows = document.querySelectorAll('.row');
+  rows.forEach(function(r){
+    var min=+r.dataset.min, max=+r.dataset.max, lo=+r.dataset.lo, hi=+r.dataset.hi;
+    var oct=+r.dataset.oct, may=r.dataset.may!==undefined?+r.dataset.may:null;
+    var pct=function(v){ return Math.max(0,Math.min(100,(v-min)/(max-min)*100)); };
+    var t=r.querySelector('.track');
+    var band=document.createElement('div'); band.className='band';
+    band.style.left=pct(lo)+'%'; band.style.width=(pct(hi)-pct(lo))+'%';
+    var axis=document.createElement('div'); axis.className='axis';
+    t.appendChild(axis); t.appendChild(band);
+    var start = may!==null?pct(may):pct(oct);
+    if(may!==null){
+      var join=document.createElement('div'); join.className='join';
+      join.style.left=Math.min(start,pct(oct))+'%'; join.style.width='0';
+      t.appendChild(join);
+      var dm=document.createElement('div'); dm.className='dot may'; dm.style.left=start+'%'; t.appendChild(dm);
+    }
+    var dox=document.createElement('div'); dox.className='dot oct'; dox.style.left=start+'%'; t.appendChild(dox);
+    r._reveal=function(){
+      dox.style.left=pct(oct)+'%';
+      if(may!==null){ r.querySelector('.join').style.width=Math.abs(pct(oct)-start)+'%'; }
+    };
+    if(reduce) r._reveal();
+  });
+
+  // Scroll progress bar
+  var bar=document.getElementById('progress');
+  function onScroll(){ var h=document.documentElement; var p=h.scrollTop/(h.scrollHeight-h.clientHeight); bar.style.width=(p*100)+'%'; }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  // Generic reveals
+  var rio=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); rio.unobserve(en.target);} }); },{threshold:0.2});
+  document.querySelectorAll('.reveal, .tl').forEach(function(el){ rio.observe(el); });
+  var cio=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ var li=en.target.querySelectorAll('.check'); li.forEach(function(l,k){ setTimeout(function(){ l.classList.add('in'); }, k*120); }); cio.unobserve(en.target);} }); },{threshold:0.3});
+  document.querySelectorAll('.checks').forEach(function(el){ cio.observe(el); });
+
+  // Rings
+  document.querySelectorAll('.ring').forEach(function(rg){ var off=408-408*(+rg.dataset.pct/100); rg.style.setProperty('--off',off); if(reduce) rg.querySelector('.fgc').style.strokeDashoffset=off; });
+
+  // Count-ups
+  function countUp(el,done){
+    var from=+el.dataset.from, to=+el.dataset.to, dec=+el.dataset.dec||0, dur=1800, t0=null;
+    var pre=el.dataset.prefix||'', suf=el.dataset.suffix||'';
+    if(reduce){ el.textContent=pre+to.toFixed(dec)+suf; if(done) done(); return; }
+    function step(ts){
+      if(!t0) t0=ts; var p=Math.min(1,(ts-t0)/dur); var e=1-Math.pow(1-p,3);
+      el.textContent=pre+(from+(to-from)*e).toFixed(dec)+suf;
+      if(p<1) requestAnimationFrame(step); else if(done) done();
+    }
+    requestAnimationFrame(step);
+  }
+
+  // Headline word rise
+  var h1=document.querySelector('.hero h1');
+  h1.innerHTML=h1.textContent.split(' ').map(function(w,k){ return '<span class="w"><span style="animation-delay:'+(0.08*k+0.1)+'s">'+w+'</span></span>'; }).join('');
+
+  // Liquid tank
+  function wavePath(amp){ var d='M0,0'; for(var x=0;x<=960;x+=120){ d+=' q60,'+(-amp)+' 120,0'; amp=-amp; } return d+' V700 H0 Z'; }
+  document.getElementById('w1').setAttribute('d',wavePath(12));
+  document.getElementById('w2').setAttribute('d',wavePath(16));
+  function fillTank(){ document.getElementById('liquid').setAttribute('style','transform:translate(0,276px)'); document.getElementById('dbar').style.width='100%'; }
+  // Radar
+  var R={axes:['Haemoglobin','Ferritin','Vitamin D','Folic acid','B1','B2','B6','B12'],
+    min:[10,0,0,0,50,100,0,100], max:[16,100,100,25,200,400,35,1000],
+    lo:[12,30,30,3.1,70,137,2,187], hi:[15,100,100,20.5,180,370,32.8,883],
+    may:[11.7,11.81,25.5,4.7,76.32,145.87,8.58,806], oct:[13.1,42.53,36.9,13.7,116.83,257.46,18.63,827]};
+  var svg=document.getElementById('radar'), NS='http://www.w3.org/2000/svg', C=280, RAD=200;
+  function norm(v,i){ return Math.max(0,Math.min(1,(v-R.min[i])/(R.max[i]-R.min[i]))); }
+  function pt(f,i){ var a=-Math.PI/2+i*2*Math.PI/8; return [C+Math.cos(a)*RAD*f, C+Math.sin(a)*RAD*f]; }
+  function poly(vals){ return vals.map(function(v,i){ return pt(v,i).join(','); }).join(' '); }
+  function el(n,attrs){ var e=document.createElementNS(NS,n); for(var k in attrs) e.setAttribute(k,attrs[k]); svg.appendChild(e); return e; }
+  [.25,.5,.75,1].forEach(function(f){ el('polygon',{points:poly([f,f,f,f,f,f,f,f]),'class':'grid'}); });
+  for(var i=0;i<8;i++){ var p=pt(1,i); el('line',{x1:C,y1:C,x2:p[0],y2:p[1],'class':'axis'}); var q=pt(1.17,i); var t=el('text',{x:q[0],y:q[1],'class':'lbl','text-anchor':'middle','dominant-baseline':'middle'}); t.textContent=R.axes[i]; }
+  var hiN=R.hi.map(norm), loN=R.lo.map(norm);
+  el('path',{d:'M'+poly(hiN).replace(/ /g,' L')+' Z M'+poly(loN).replace(/ /g,' L')+' Z','class':'band','fill-rule':'evenodd'});
+  var mayN=R.may.map(norm), octN=R.oct.map(norm);
+  el('polygon',{points:poly(mayN),'class':'may'});
+  var octPoly=el('polygon',{points:poly(mayN),'class':'oct'});
+  var dots=octN.map(function(v,i){ var p=pt(mayN[i],i); return el('circle',{cx:p[0],cy:p[1],r:6,'class':'pt'}); });
+  function radarGo(){
+    var t0=null, dur=1800;
+    function step(ts){ if(!t0)t0=ts; var p=Math.min(1,(ts-t0)/dur), e=1-Math.pow(1-p,3);
+      var cur=mayN.map(function(m,i){ return m+(octN[i]-m)*e; });
+      octPoly.setAttribute('points',poly(cur)); cur.forEach(function(v,i){ var q=pt(v,i); dots[i].setAttribute('cx',q[0]); dots[i].setAttribute('cy',q[1]); });
+      if(p<1) requestAnimationFrame(step); }
+    if(reduce){ octPoly.setAttribute('points',poly(octN)); octN.forEach(function(v,i){ var q=pt(v,i); dots[i].setAttribute('cx',q[0]); dots[i].setAttribute('cy',q[1]); }); return; }
+    requestAnimationFrame(step);
+  }
+  var radarIO=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ radarGo(); radarIO.unobserve(en.target);} }); },{threshold:0.4});
+  radarIO.observe(svg);
+
+  // Bars
+  document.querySelectorAll('.bar').forEach(function(b){
+    var max=+b.dataset.max, lo=+b.dataset.lo, hi=+b.dataset.hi, may=+b.dataset.may, oct=+b.dataset.oct, plot=b.querySelector('.plot');
+    var z=document.createElement('div'); z.className='zone'; z.style.bottom=(lo/max*100)+'%'; z.style.height=((Math.min(hi,max)-lo)/max*100)+'%'; plot.appendChild(z);
+    var bm=document.createElement('div'); bm.className='b m'; bm.style.height=(may/max*100)+'%'; bm.innerHTML='<span>'+may+'</span>'; plot.appendChild(bm);
+    var bo=document.createElement('div'); bo.className='b o'; bo.style.height=(oct/max*100)+'%'; bo.innerHTML='<span>'+oct+'</span>'; plot.appendChild(bo);
+    var dl=document.createElement('div'); dl.className='dl'; dl.innerHTML='<span>8 May</span><span>6 Oct</span>'; plot.insertAdjacentElement('afterend',dl);
+  });
+  var bio=new IntersectionObserver(function(es){ es.forEach(function(en,k){ if(en.isIntersecting){ en.target.classList.add('in'); bio.unobserve(en.target);} }); },{threshold:0.3});
+  document.querySelectorAll('.bar').forEach(function(b){ bio.observe(b); });
+
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(!en.isIntersecting) return;
+      var el=en.target;
+      if(el.classList.contains('row')){ el._reveal(); var d=el.querySelector('.dot.oct'); if(!reduce) d.classList.add('ping'); }
+      else if(el.dataset.to!==undefined){ countUp(el); var dl=el.closest('.delta'); if(dl) dl.classList.add('in'); var rg=el.closest('.ring'); if(rg){ rg.querySelector('.fgc').style.strokeDashoffset=rg.style.getPropertyValue('--off'); } }
+      io.unobserve(el);
+    });
+  },{threshold:0.4});
+  rows.forEach(function(r){ io.observe(r); });
+  document.querySelectorAll('.ring .num, .delta .big').forEach(function(n){ io.observe(n); });
+
+  // Hero number: one orchestrated moment on load
+  var h=document.getElementById('heroNum');
+  setTimeout(function(){ countUp(h); fillTank(); }, 700);
+  if(reduce){ fillTank(); }
+  if(reduce){ document.querySelectorAll('.tl').forEach(function(t){ t.classList.add('in'); }); }
+})();
+</script>
+</body>
+</html>
